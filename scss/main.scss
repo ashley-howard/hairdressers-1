@@ -6,7 +6,6 @@ html {
 }
 
 .container {
-    background-image: url("../media/salon-tools-2.jpg");
     width: 100vw;
     height: 100vh;
 }
@@ -60,10 +59,34 @@ html {
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    h2 {
+        // font-family: 'Allura', cursive;
+        font-weight: 500;
+        font-family: 'Alex Brush', cursive;
+        font-size: 7em;
+        color: #ffc0c0;
+        text-shadow: -11px 11px 9px #00000061;
+    }
+
+    h1 {
+        font-size: 10em;
+        letter-spacing: 30px;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 9px;
+    }
 }
 
 #hero {
     color: white;
+    background-image: url("../media/back-trim.jpg");
+
 }
 
 .brand-name {
