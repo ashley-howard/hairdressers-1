@@ -5,8 +5,8 @@ html {
     font-weight: 600;
 }
 
-.container {
-    width: 100vw;
+.full {
+    width: 100%;
     height: 100vh;
 }
 
@@ -62,31 +62,73 @@ html {
     flex-direction: column;
 
     h2 {
-        // font-family: 'Allura', cursive;
         font-weight: 500;
-        font-family: 'Alex Brush', cursive;
-        font-size: 7em;
+        font-family: 'Parisienne', cursive;
+        font-size: 6em;
         color: #ffc0c0;
-        text-shadow: -11px 11px 9px #00000061;
+        transform: translateY(-500px);
+        animation: from-top 0.3s ease forwards;
+        opacity: 0.5;
     }
 
     h1 {
         font-size: 10em;
         letter-spacing: 30px;
         text-transform: uppercase;
+        color: #e5ecf2;
+        text-shadow: -1px 4px 18px #00000024;
+        transform: translateX(-500px);
+        animation: from-left 0.3s ease forwards;
+        opacity: 0.5;
     }
 
     h3 {
         text-transform: uppercase;
         font-size: 0.8em;
         letter-spacing: 9px;
+        transform: translateY(500px);
+        animation: from-left 0.3s ease forwards;
+        opacity: 0.5;
+        padding-top: 20px;
+    }
+}
+
+@keyframes from-left {
+    from {
+        // transform: translateX(-500px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes from-top {
+    from {
+        // transform: translateX(-500px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes from-bottom {
+    from {
+        // transform: translateX(-500px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 #hero {
     color: white;
     background-image: url("../media/back-trim.jpg");
-
 }
 
 .brand-name {
@@ -95,4 +137,30 @@ html {
     letter-spacing: 1em;
     border-left: 4px solid white;
     padding-left: 10px;
+}
+
+#subscribe {
+    background: #171717;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        padding: 10px 10px;
+        margin: 30px;
+        background: transparent;
+        border: 1px solid white;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+    }
+
+    button {
+        padding: 12px 80px;
+        margin: 30px;
+        background: white;
+        border: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
 }
