@@ -7,7 +7,7 @@ html {
 
 .full {
     width: 100%;
-    height: 100vh;
+    height: 95vh;
 }
 
 .top-menu {
@@ -63,7 +63,8 @@ html {
 
     h2 {
         font-weight: 500;
-        font-family: 'Parisienne', cursive;
+        font-family: 'Herr Von Muellerhoff', cursive;
+        letter-spacing: 5px;
         font-size: 6em;
         // color: #ffd09e;
         color: #ffd3b3;
@@ -73,7 +74,7 @@ html {
     }
 
     h1 {
-        font-size: 10em;
+        font-size: 7.5em;
         letter-spacing: 30px;
         text-transform: uppercase;
         color: #e5ecf2;
@@ -81,7 +82,7 @@ html {
         transform: translateX(-500px);
         animation: from-left 0.3s ease forwards;
         opacity: 0.5;
-        font-family: 'DM Serif Display', serif;
+        // font-family: 'DM Serif Display', serif;
     }
 
     h3 {
@@ -197,5 +198,61 @@ div#three-boxes {
             background: black;
             color: white;
         }
+    }
+}
+
+.inner-box {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 2px solid #ad8553;
+    text-transform: uppercase;
+
+    &:hover {
+        border: 2px solid transparent;
+        animation: fade-in 0.5s ease forwards;
+    }
+
+    h3 {
+        // font-family: 'Parisienne', cursive;
+        // font-family: 'Dancing Script', cursive;
+        // font-family: 'Allura', cursive;
+        font-family: 'Herr Von Muellerhoff', cursive;
+        letter-spacing: 5px;
+        font-size: 5em;
+        color: #ad8553;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    span {
+        font-size: 0.8em;
+        letter-spacing: 2px;
+    }
+
+    a {
+        color: #ad8553;
+        margin-top: 40px;
+        letter-spacing: 3px;
+        font-size: 0.8em;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        // transform: translateX(-500px);
+    }
+
+    to {
+        // transform: translateY(0);
+        border: 2px solid #ad8553;
     }
 }
