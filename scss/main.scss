@@ -15,7 +15,6 @@ button {
 }
 
 .top-menu {
-    // background: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,7 +69,6 @@ button {
         font-family: 'Herr Von Muellerhoff', cursive;
         letter-spacing: 5px;
         font-size: 6em;
-        // color: #ffd09e;
         color: #ffd3b3;
         transform: translateY(-500px);
         animation: from-top 0.3s ease forwards;
@@ -86,7 +84,6 @@ button {
         transform: translateX(-500px);
         animation: from-left 0.3s ease forwards;
         opacity: 0.5;
-        // font-family: 'DM Serif Display', serif;
     }
 
     h3 {
@@ -102,7 +99,6 @@ button {
 
 @keyframes from-left {
     from {
-        // transform: translateX(-500px);
     }
 
     to {
@@ -113,7 +109,6 @@ button {
 
 @keyframes from-top {
     from {
-        // transform: translateX(-500px);
     }
 
     to {
@@ -124,7 +119,6 @@ button {
 
 @keyframes from-bottom {
     from {
-        // transform: translateX(-500px);
     }
 
     to {
@@ -210,7 +204,6 @@ div#three-boxes {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // border: 2px solid #ad8553;
     text-transform: uppercase;
 
     &:hover {
@@ -219,9 +212,6 @@ div#three-boxes {
     }
 
     h3 {
-        // font-family: 'Parisienne', cursive;
-        // font-family: 'Dancing Script', cursive;
-        // font-family: 'Allura', cursive;
         font-family: 'Herr Von Muellerhoff', cursive;
         letter-spacing: 5px;
         font-size: 5em;
@@ -250,11 +240,9 @@ div#three-boxes {
 
 @keyframes fade-in {
     from {
-        // transform: translateX(-500px);
     }
 
     to {
-        // transform: translateY(0);
         border: 2px solid #ad8553;
     }
 }
@@ -321,4 +309,51 @@ div#three-boxes {
             font-family: 'Montserrat', sans-serif;
         }
     }
+}
+
+#gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 30px;
+    grid-template-areas: "photo-1 photo-1 photo-3 photo-3""photo-1 photo-1 photo-4 photo-5""photo-2 photo-2 photo-4 photo-5";
+    width: 100%;
+    height: 800px;
+    padding: 30px;
+
+    &>div {
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.photo-1 {
+    grid-area: photo-1;
+    background-image: url("../media/shaving-beard.jpg");
+}
+
+.photo-2 {
+    grid-area: photo-2;
+    background-image: url("../media/salon-tools.jpg");
+}
+
+.photo-3 {
+    grid-area: photo-3;
+    background-image: url("../media/haircut.jpg");
+}
+
+.photo-4 {
+    grid-area: photo-4;
+    background-image: url("../media/curling-tongs.jpg");
+}
+
+.photo-5 {
+    grid-area: photo-5;
+    background-image: url("../media/hair-dye.jpg");
 }
