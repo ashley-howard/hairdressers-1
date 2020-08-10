@@ -27,9 +27,9 @@ html {
         margin-right: 45px;
 
         svg:nth-child(2) {
-            border-left: 1px solid white;
+            border-left: 2px solid white;
             padding: 0 10px;
-            border-right: 1px solid white;
+            border-right: 2px solid white;
             margin: 0 5px;
         }
     }
@@ -65,7 +65,8 @@ html {
         font-weight: 500;
         font-family: 'Parisienne', cursive;
         font-size: 6em;
-        color: #ffc0c0;
+        // color: #ffd09e;
+        color: #ffd3b3;
         transform: translateY(-500px);
         animation: from-top 0.3s ease forwards;
         opacity: 0.5;
@@ -80,6 +81,7 @@ html {
         transform: translateX(-500px);
         animation: from-left 0.3s ease forwards;
         opacity: 0.5;
+        font-family: 'DM Serif Display', serif;
     }
 
     h3 {
@@ -129,6 +131,17 @@ html {
 #hero {
     color: white;
     background-image: url("../media/back-trim.jpg");
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #0000004f;
+    }
 }
 
 .brand-name {
@@ -162,5 +175,27 @@ html {
         border: none;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
+    }
+}
+
+div#three-boxes {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    text-align: center;
+
+    &>div {
+        width: calc(100%/3);
+        height: 100%;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(2) {
+            background: black;
+            color: white;
+        }
     }
 }
