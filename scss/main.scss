@@ -10,6 +10,10 @@ html {
     height: 95vh;
 }
 
+button {
+    cursor: pointer;
+}
+
 .top-menu {
     // background: red;
     display: flex;
@@ -137,10 +141,8 @@ html {
         content: "";
         display: block;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        height: 95%;
+        width: 100%;
         background: #0000004f;
     }
 }
@@ -254,5 +256,69 @@ div#three-boxes {
     to {
         // transform: translateY(0);
         border: 2px solid #ad8553;
+    }
+}
+
+#read-more {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../media/woman-hair-in-face.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #0000004f;
+    }
+
+    .inner-container {
+        width: 45%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "Makeover";
+            font-size: 10em;
+            z-index: -1;
+            color: #d87c084a;
+            top: 23px;
+            font-weight: 500;
+            font-family: 'Herr Von Muellerhoff', cursive;
+            letter-spacing: 5px;
+        }
+
+        h2 {
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        p {
+            line-height: 25px;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        button {
+            background: #15151500;
+            color: white;
+            padding: 11px 31px;
+            font-size: 1.1em;
+            border: 1px solid white;
+            margin-top: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
     }
 }
