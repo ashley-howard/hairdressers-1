@@ -1,8 +1,20 @@
 @import 'reset';
 
+$primary-font: -apple-system,
+system-ui,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif;
+$secondary-font: 'Montserrat',
+sans-serif;
+$tertiary-font: 'Herr Von Muellerhoff',
+cursive;
+
 html {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-family: $primary-font;
 }
 
 .full {
@@ -25,6 +37,7 @@ button {
     font-size: 0.8em;
     letter-spacing: .35em;
     fill: white;
+    font-family: $secondary-font;
 
     .extras {
         margin-right: 45px;
@@ -65,8 +78,7 @@ button {
     flex-direction: column;
 
     h2 {
-        font-weight: 500;
-        font-family: 'Herr Von Muellerhoff', cursive;
+        font-family: $tertiary-font;
         letter-spacing: 5px;
         font-size: 6em;
         color: #ffd3b3;
@@ -98,8 +110,7 @@ button {
 }
 
 @keyframes from-left {
-    from {
-    }
+    from {}
 
     to {
         transform: translateX(0);
@@ -108,8 +119,7 @@ button {
 }
 
 @keyframes from-top {
-    from {
-    }
+    from {}
 
     to {
         transform: translateY(0);
@@ -118,8 +128,7 @@ button {
 }
 
 @keyframes from-bottom {
-    from {
-    }
+    from {}
 
     to {
         transform: translateY(0);
@@ -161,7 +170,7 @@ button {
         margin: 30px;
         background: transparent;
         border: 1px solid white;
-        font-family: 'Montserrat', sans-serif;
+        font-family: $secondary-font;
         color: white;
     }
 
@@ -170,8 +179,7 @@ button {
         margin: 30px;
         background: white;
         border: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
+        font-family: $secondary-font;
     }
 }
 
@@ -212,12 +220,11 @@ div#three-boxes {
     }
 
     h3 {
-        font-family: 'Herr Von Muellerhoff', cursive;
+        font-family: $tertiary-font;
         letter-spacing: 5px;
         font-size: 5em;
         color: #ad8553;
         text-transform: capitalize;
-        font-weight: 500;
     }
 
     h2 {
@@ -239,8 +246,7 @@ div#three-boxes {
 }
 
 @keyframes fade-in {
-    from {
-    }
+    from {}
 
     to {
         border: 2px solid #ad8553;
@@ -283,8 +289,7 @@ div#three-boxes {
             z-index: -1;
             color: #d87c084a;
             top: 23px;
-            font-weight: 500;
-            font-family: 'Herr Von Muellerhoff', cursive;
+            font-family: $tertiary-font;
             letter-spacing: 5px;
         }
 
@@ -296,7 +301,6 @@ div#three-boxes {
         p {
             line-height: 25px;
             font-size: 1.2em;
-            font-weight: 500;
         }
 
         button {
@@ -306,7 +310,7 @@ div#three-boxes {
             font-size: 1.1em;
             border: 1px solid white;
             margin-top: 10px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: $primary-font;
         }
     }
 }
