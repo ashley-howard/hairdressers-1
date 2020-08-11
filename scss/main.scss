@@ -1,5 +1,12 @@
 @import 'reset';
 
+@font-face {
+    font-family: "Quentin";
+    src: url("https://ashley.how/assets/fonts/Quentin.otf") format("opentype")
+}
+
+$gold: #ad8553;
+
 $primary-font: -apple-system,
 system-ui,
 BlinkMacSystemFont,
@@ -10,7 +17,9 @@ Arial,
 sans-serif;
 $secondary-font: 'Montserrat',
 sans-serif;
-$tertiary-font: 'Herr Von Muellerhoff',
+// $tertiary-font: 'Herr Von Muellerhoff',
+// cursive;
+$tertiary-font: 'Quentin',
 cursive;
 
 html {
@@ -94,8 +103,8 @@ button {
 
     h2 {
         font-family: $tertiary-font;
-        letter-spacing: 5px;
-        font-size: 6em;
+        // letter-spacing: 5px;
+        font-size: 4em;
         color: #ffd3b3;
         transform: translateY(-500px);
         animation: from-top 0.3s ease forwards;
@@ -104,6 +113,7 @@ button {
 
     h1 {
         font-size: 7.5em;
+        font-weight: 700;
         letter-spacing: 30px;
         text-transform: uppercase;
         color: #e5ecf2;
@@ -238,7 +248,7 @@ div#three-boxes {
         font-family: $tertiary-font;
         letter-spacing: 5px;
         font-size: 5em;
-        color: #ad8553;
+        color: $gold;
         text-transform: capitalize;
     }
 
@@ -253,7 +263,7 @@ div#three-boxes {
     }
 
     a {
-        color: #ad8553;
+        color: $gold;
         margin-top: 40px;
         letter-spacing: 3px;
         font-size: 0.8em;
@@ -264,7 +274,7 @@ div#three-boxes {
     from {}
 
     to {
-        border: 2px solid #ad8553;
+        border: 2px solid $gold;
     }
 }
 
@@ -326,6 +336,11 @@ div#three-boxes {
             border: 1px solid white;
             margin-top: 10px;
             font-family: $primary-font;
+
+            &:hover {
+                background: white;
+                color: black;
+            }
         }
     }
 }
@@ -349,6 +364,11 @@ div#three-boxes {
     &>div {
         background-position: center;
         background-size: cover;
+        position: relative;
+
+        &:hover>.hover-info {
+            opacity: 1;
+        }
     }
 }
 
@@ -375,4 +395,37 @@ div#three-boxes {
 .photo-5 {
     grid-area: photo-5;
     background-image: url("../media/hair-dye.jpg");
+}
+
+.hover-info {
+    opacity: 0;
+    background: #00000054;
+    margin: auto auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid $gold;
+    text-transform: uppercase;
+    transition: opacity 0.2s linear;
+
+    &>* {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    span {
+        font-family: $secondary-font;
+        font-size: 0.8em;
+        letter-spacing: 3px;
+    }
 }
