@@ -267,6 +267,7 @@ div#three-boxes {
         margin-top: 40px;
         letter-spacing: 3px;
         font-size: 0.8em;
+        font-weight: 600;
     }
 }
 
@@ -326,6 +327,7 @@ div#three-boxes {
         p {
             line-height: 25px;
             font-size: 1.2em;
+            text-align: center;
         }
 
         button {
@@ -433,37 +435,59 @@ div#three-boxes {
 
 #impress {
     background: black;
-    height: 500px;
+    background-image: url('../media/woman-hair-in-face.jpg');
+    height: 800px;
     // height: 100%;
 
     &>.inner-container {
         display: flex;
+        height: 100%;
 
         &>div {
             width: 50%;
+            height: 100%;
         }
 
-        .images>div {
-            width: 50%;
-            height: 100%;
-            background-position: center;
-            background-size: cover;
-            position: absolute;
-            width: 500px;
-            height: 407px;
+        .img-container {
+            // background: red;
+            width: 74%;
+            height: 64%;
+            position: relative;
+
+            &>div {
+
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                width: 350px;
+                height: 350px;
+            }
         }
+
+
+        .images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
 
         .photo-1 {
             background-image: url('../media/hairdressers-working.jpg');
             background-size: cover;
+            // position: relative;
+            top: 0;
+            left: 0;
         }
 
         .photo-2 {
             background-image: url('../media/salon-tools.jpg');
             background-size: cover;
-            position: relative !important;
-            top: 34%;
-            left: 26%;
+            // position: relative !important;
+            // top: 172px;
+            right: 0;
+            bottom: 0;
         }
     }
 }
