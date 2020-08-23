@@ -16,3 +16,7 @@ function scrollFunction() {
         topMenu.style.animation = 'none';
     }
 }
+
+function scrollUp() {
+    window.scrollTo(0, 0)
+}

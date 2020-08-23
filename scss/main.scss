@@ -22,8 +22,14 @@ sans-serif;
 $tertiary-font: 'Quentin',
 cursive;
 
+::selection {
+    background-color: $gold;
+    color: white;
+}
+
 html {
     font-family: $primary-font;
+    scroll-behavior: smooth;
 }
 
 .full {
@@ -433,11 +439,15 @@ div#three-boxes {
 }
 
 
+
+
 #impress {
-    background: black;
-    background-image: url('../media/woman-hair-in-face.jpg');
     height: 800px;
-    // height: 100%;
+    background-image: url('../media/woman-hair-in-face.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &>.inner-container {
         display: flex;
@@ -464,7 +474,6 @@ div#three-boxes {
             }
         }
 
-
         .images {
             display: flex;
             align-items: center;
@@ -489,5 +498,18 @@ div#three-boxes {
             right: 0;
             bottom: 0;
         }
+    }
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+    fill: $gold;
+    cursor: pointer;
+
+    &:hover {
+        fill: #ffc986;
     }
 }
