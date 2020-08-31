@@ -285,7 +285,8 @@ div#three-boxes {
     }
 }
 
-#read-more {
+#read-more,
+#testimonials {
     height: 400px;
     width: 100%;
     display: flex;
@@ -328,6 +329,8 @@ div#three-boxes {
         h2 {
             font-size: 3em;
             letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
         p {
@@ -349,6 +352,15 @@ div#three-boxes {
                 background: white;
                 color: black;
             }
+        }
+    }
+}
+
+#testimonials {
+    .inner-container {
+
+        &::before {
+            content: "They said";
         }
     }
 }
@@ -521,6 +533,18 @@ div#three-boxes {
         // background: red;
         width: 65%;
         height: 280px;
+        position: absolute;
+
+        &::before {
+            position: absolute;
+            content: "Let's do it";
+            font-size: 10em;
+            z-index: -1;
+            color: #d87c084a;
+            top: 23px;
+            font-family: $tertiary-font;
+            letter-spacing: 5px;
+        }
 
         .heading {
             text-transform: uppercase;
@@ -540,10 +564,6 @@ div#three-boxes {
             margin-bottom: 2px;
         }
 
-        // p {
-        //     // font-size: 0.8em;
-        //     // letter-spacing: 1.2px;
-        // }
     }
 
     .price-list {
@@ -559,6 +579,79 @@ div#three-boxes {
             span {
                 position: absolute;
                 right: 0;
+            }
+        }
+    }
+}
+
+#brands {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #171717;
+
+    .brand {
+        height: 100%;
+    }
+
+    svg {
+        fill: white;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+#map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    .inner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 450px;
+        width: 50%;
+
+        &>div {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .map-container {
+            height: 70%;
+            width: 35%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .map-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+
+            span {
+                padding: 10px 0px;
+
+                svg {
+                    width: 18px;
+                }
             }
         }
     }
