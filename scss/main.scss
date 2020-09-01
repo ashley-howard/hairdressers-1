@@ -17,8 +17,6 @@ Arial,
 sans-serif;
 $secondary-font: 'Montserrat',
 sans-serif;
-// $tertiary-font: 'Herr Von Muellerhoff',
-// cursive;
 $tertiary-font: 'Quentin',
 cursive;
 
@@ -30,6 +28,11 @@ cursive;
 html {
     font-family: $primary-font;
     scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 .full {
@@ -109,7 +112,6 @@ button {
 
     h2 {
         font-family: $tertiary-font;
-        // letter-spacing: 5px;
         font-size: 4em;
         color: #ffd3b3;
         transform: translateY(-500px);
@@ -167,6 +169,16 @@ button {
     }
 }
 
+.brand-name {
+    margin-left: 45px;
+    font-size: 1.2em;
+    letter-spacing: 1em;
+    border-left: 4px solid white;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+}
+
 #hero {
     color: white;
     background-image: url("../media/back-trim.jpg");
@@ -179,14 +191,6 @@ button {
         width: 100%;
         background: #0000004f;
     }
-}
-
-.brand-name {
-    margin-left: 45px;
-    font-size: 1.2em;
-    letter-spacing: 1em;
-    border-left: 4px solid white;
-    padding-left: 10px;
 }
 
 #subscribe {
@@ -468,7 +472,6 @@ div#three-boxes {
         }
 
         .img-container {
-            // background: red;
             width: 74%;
             height: 64%;
             position: relative;
@@ -492,7 +495,6 @@ div#three-boxes {
         .photo-1 {
             background-image: url('../media/hairdressers-working.jpg');
             background-size: cover;
-            // position: relative;
             top: 0;
             left: 0;
         }
@@ -500,8 +502,6 @@ div#three-boxes {
         .photo-2 {
             background-image: url('../media/salon-tools.jpg');
             background-size: cover;
-            // position: relative !important;
-            // top: 172px;
             right: 0;
             bottom: 0;
         }
@@ -530,7 +530,6 @@ div#three-boxes {
 
     .inner-container {
         display: flex;
-        // background: red;
         width: 65%;
         height: 280px;
         position: absolute;
@@ -633,10 +632,6 @@ div#three-boxes {
             height: 70%;
             width: 35%;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
 
         .map-info {
@@ -646,13 +641,96 @@ div#three-boxes {
             height: 100%;
             width: 50%;
 
+            p {
+                margin-bottom: 20px;
+                line-height: 23px;
+            }
+
             span {
                 padding: 10px 0px;
+                display: flex;
+                align-items: center;
 
                 svg {
                     width: 18px;
+                    margin-right: 10px;
                 }
             }
         }
+    }
+}
+
+footer {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .brand-name {
+        margin-left: 0;
+    }
+
+    .inner-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 300px;
+        width: 90%;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            width: 12%;
+            height: 160px;
+            margin: 0 50px;
+            justify-content: space-evenly;
+
+            h3 {
+                font-size: 1.5em;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+
+        .timetable {
+            div {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+
+    .social-links {
+        a {
+            text-decoration: none;
+        }
+
+        svg {
+            fill: white;
+            border-right: 1px solid white;
+            padding: 5px;
+            height: 20px;
+
+            &:hover {
+                fill: $gold;
+            }
+        }
+    }
+
+    .copyright {
+        background: #101010;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 90%;
     }
 }
