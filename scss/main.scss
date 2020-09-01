@@ -296,7 +296,7 @@ div#three-boxes {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../media/woman-hair-in-face.jpg");
+    background-image: url("../media/empty-salon.jpg");
     background-size: cover;
     position: relative;
     color: white;
@@ -461,14 +461,41 @@ div#three-boxes {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
+
+    a {
+        color: $gold;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-top: 50px;
+    }
 
     &>.inner-container {
         display: flex;
+        justify-content: center;
         height: 100%;
 
         &>div {
-            width: 50%;
             height: 100%;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+
+            p {
+                line-height: 25px;
+            }
+
+            h2 {
+                font-size: 2em;
+                padding: 20px 0;
+                font-weight: 600;
+            }
         }
 
         .img-container {
@@ -490,6 +517,7 @@ div#three-boxes {
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 37%;
         }
 
         .photo-1 {
@@ -602,7 +630,6 @@ div#three-boxes {
     }
 }
 
-
 #map {
     display: flex;
     align-items: center;
@@ -685,7 +712,7 @@ footer {
             width: 12%;
             height: 160px;
             margin: 0 50px;
-            justify-content: space-evenly;
+            justify-content: space-between;
 
             h3 {
                 font-size: 1.5em;
@@ -729,8 +756,4 @@ footer {
         justify-content: center;
     }
 
-    .map-container {
-        width: 100%;
-        height: 90%;
-    }
 }
