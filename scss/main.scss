@@ -778,10 +778,62 @@ footer {
 //     z-index: 1;
 // }
 
+.mobile-nav {
+    background: #171717;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    svg {
+        position: absolute;
+        left: 15px;
+        fill: white;
+    }
+
+    .brand-name {
+        margin-left: 0;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 600px) {
     #top-menu {
         display: none;
+        height: 100%;
+
+        .brand-name,
+        .extras {
+            display: none;
+        }
+
+        ul {
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            background: #1d1d1ded;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            
+
+            svg {
+                position: absolute;
+                top: 17px;
+                left: 17px;
+                width: 20px;
+            }
+        }
     }
 
     #hero {
@@ -796,9 +848,28 @@ footer {
         height: 100%;
     }
 
+    #map {
+        height: 100%;
+
+        .inner-container {
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+
+            .map-container {
+                width: 90%;
+            }
+
+            .map-info {
+                width: 90%;
+            }
+        }
+    }
+
     #brands {
         flex-wrap: wrap;
         height: 100%;
+        flex-direction: column;
     }
 
     #read-more .inner-container h2,
@@ -807,6 +878,8 @@ footer {
     }
 
     #prices {
+        height: 100%;
+
         .inner-container {
             width: 100%;
             height: 100%;
@@ -826,10 +899,11 @@ footer {
     }
 
     #read-more {
+
         text-align: center;
 
         .inner-container {
-            width: 100%;
+            width: 100% !important;
             height: 100%;
 
 
@@ -864,8 +938,20 @@ footer {
             height: 100%;
             width: 100%;
 
+            .brand-name {
+                margin-left: 25px;
+            }
+
             &>div {
-                width: 100%;
+                width: 70%;
+                height: 100px;
+                padding: 15px 0;
+                align-items: center;
+
+                p,
+                span {
+                    text-align: center;
+                }
             }
         }
     }

@@ -18,12 +18,18 @@
             </div>
 
             <nav>
-                <ul>
+                <ul id="mobileNav" class="closed">
+                    <svg id="closeBtn" onclick="closeMenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                    </svg>
+
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#prices">Prices</a></li>
-                    <li><a href="#map">Contact</a></li>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
 
@@ -51,7 +57,14 @@
     </div>
 
     <div class="mobile-nav">
-        
+
+        <svg id="openBtn" onclick="openMenu()" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd" clip-rule="evenodd">
+            <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2" />
+            <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" /></svg>
+        <div class="brand-name">
+            <a href="#">Blade</a>
+        </div>
     </div>
 
     <div class="section" id="subscribe">

@@ -20,3 +20,32 @@ function scrollFunction() {
 function scrollUp() {
     window.scrollTo(0, 0)
 }
+
+function openMenu() {
+    // document body = overflow hidden, so you cant scroll
+    // remove burger when open
+    // remove x when closed
+    // when a link is clicked, hide menu
+
+    console.log('open')
+    document.getElementById('mobileNav').classList.add("opened");
+    document.getElementById('mobileNav').classList.remove("closed");
+
+    document.getElementById('openBtn').style.display = 'none';
+    document.getElementById('closeBtn').style.display = 'block';
+    topMenu.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+
+function closeMenu() {
+    console.log('closed')
+    document.getElementById('mobileNav').classList.add("closed");
+    document.getElementById('mobileNav').classList.remove("opened");
+    document.getElementById('closeBtn').style.display = 'none';
+    document.getElementById('openBtn').style.display = 'block';
+
+    topMenu.style.display = 'none';
+    document.body.style.overflow = 'initial';
+
+}
