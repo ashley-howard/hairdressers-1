@@ -778,13 +778,17 @@ footer {
 //     z-index: 1;
 // }
 
+#closeBtn {
+    display: none;
+}
+
 .mobile-nav {
+    display: none;
     background: #171717;
     height: 55px;
     width: 100%;
     position: fixed;
     top: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
@@ -807,6 +811,11 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
+
+    .mobile-nav {
+        display: flex;
+    }
+
     #top-menu {
         display: none;
         height: 100%;
@@ -825,7 +834,7 @@ footer {
             width: 100%;
             align-items: center;
             justify-content: space-evenly;
-            
+
 
             svg {
                 position: absolute;
