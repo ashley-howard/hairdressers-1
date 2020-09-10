@@ -6,7 +6,6 @@
 }
 
 $gold: #ad8553;
-// :#ffeebf;
 
 $primary-font: -apple-system,
 system-ui,
@@ -80,12 +79,6 @@ button {
             cursor: pointer;
         }
 
-        // svg:nth-child(1) {
-        //     // border-left: 2px solid white;
-        //     padding: 0 10px;
-        //     // border-right: 2px solid white;
-        //     margin: 0 5px;
-        // }
     }
 
     ul {
@@ -208,6 +201,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     input {
         padding: 10px 10px;
@@ -496,6 +490,7 @@ div#three-boxes {
             align-items: center;
             justify-content: center;
             width: 25%;
+            z-index: 1;
 
             p {
                 line-height: 25px;
@@ -628,6 +623,7 @@ div#three-boxes {
     align-items: center;
     justify-content: space-evenly;
     background: #171717;
+    flex-wrap: wrap;
 
     .brand {
         height: 100%;
@@ -651,7 +647,7 @@ div#three-boxes {
         align-items: center;
         justify-content: center;
         height: 450px;
-        width: 50%;
+        width: 100%;
 
         &>div {
             padding: 20px;
@@ -663,12 +659,6 @@ div#three-boxes {
             letter-spacing: 2px;
             font-weight: 700;
             text-transform: uppercase;
-        }
-
-        .map-container {
-            height: 70%;
-            width: 35%;
-
         }
 
         .map-info {
@@ -714,14 +704,13 @@ footer {
         align-items: center;
         justify-content: space-around;
         height: 300px;
-        width: 90%;
+        width: 100%;
 
         &>div {
             display: flex;
             flex-direction: column;
-            width: 12%;
+            width: 17%;
             height: 160px;
-            margin: 0 50px;
             justify-content: space-between;
 
             h3 {
@@ -768,16 +757,6 @@ footer {
 
 }
 
-// .mobile-nav {
-//     background: red;
-//     width: 300px;
-//     position: fixed;
-//     right: 0;
-//     height: 100%;
-//     top: 0;
-//     z-index: 1;
-// }
-
 #closeBtn {
     display: none;
 }
@@ -809,8 +788,16 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1100px) {
 
-@media only screen and (max-width: 600px) {
+    #subscribe,
+    #brands {
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
 
     .mobile-nav {
         display: flex;
@@ -949,6 +936,7 @@ footer {
 
             .brand-name {
                 margin-left: 25px;
+                flex-wrap: wrap;
             }
 
             &>div {
