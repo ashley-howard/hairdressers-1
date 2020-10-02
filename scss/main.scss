@@ -260,7 +260,7 @@ div#three-boxes {
     h3 {
         font-family: $tertiary-font;
         letter-spacing: 5px;
-        font-size: 5em;
+        font-size: 3em;
         color: $gold;
         text-transform: capitalize;
     }
@@ -854,6 +854,10 @@ footer {
 
             .map-container {
                 width: 90%;
+
+                iframe {
+                    width: 100%;
+                }
             }
 
             .map-info {
